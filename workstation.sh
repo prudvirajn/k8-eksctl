@@ -30,14 +30,14 @@ else
     echo "You are super user."
 fi
 
-# docker
-yum install -y yum-utils
-yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
-yum install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
-systemctl start docker
-systemctl enable docker
-usermod -aG docker ec2-user
-VALIDATE $? "Docker installation"
+# # docker
+# yum install -y yum-utils
+# yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+# yum install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
+# systemctl start docker
+# systemctl enable docker
+# usermod -aG docker ec2-user
+# VALIDATE $? "Docker installation"
 
 # eksctl
 curl -sLO "https://github.com/eksctl-io/eksctl/releases/latest/download/eksctl_$PLATFORM.tar.gz"
